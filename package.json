@@ -5,6 +5,9 @@
   "main": "index.js",
   "repository": "https://github.com/carlyleec/sw-express",
   "author": "carlyleec <carlyleec@gmail.com>",
+  "engines": {
+    "node": "6.9.4"
+  },
   "license": "MIT",
   "scripts": {
     "start": "nodemon ./bin/www",
