@@ -1,0 +1,65 @@
+.container{
+  display: flex;
+  flex-basis: 90%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  display: flex;
+  flex-basis: 90%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+table{
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+td{
+  border-top: 1px solid #90A4AE;
+  padding: 8px;
+  font-size: 1.5em;
+  padding: 8px;
+  line-height: 1.42857143;
+}
+
+.search-box{
+  flex: 1 1;
+  border-radius: 4px;
+  border: 2px solid #607D8B;
+  font-size: 1.5em;
+  padding: 4px;
+  outline: none;
+}
+
+.search-box:focus{
+  border: 2px solid #03A9F4;
+  outline: none;
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 50%;
+  flex-wrap: wrap;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14),
+              0 1px 18px 0 rgba(0,0,0,0.12),
+              0 3px 5px -1px rgba(0,0,0,0.3);
+  padding: 15px;
+  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #FFF;
+  border-radius: 4px;
+  &:hover {
+    background: #FFF;
+    box-shadow: 0 10px 14px 0 rgba(0,0,0,0.14),
+              0 1px 18px 0 rgba(0,0,0,0.12),
+              0 8px 10px -1px rgba(0,0,0,0.3);
+  }
+}

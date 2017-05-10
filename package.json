@@ -2,11 +2,11 @@
   "name": "sw-express",
   "version": "1.0.0",
   "description": "A demo Express API for the Star Wars API",
-  "main": "index.js",
+  "main": "app.js",
   "repository": "https://github.com/carlyleec/sw-express",
   "author": "carlyleec <carlyleec@gmail.com>",
   "engines": {
-    "node": "6.9.4"
+    "node": "7.7.4"
   },
   "license": "MIT",
   "scripts": {
@@ -22,6 +22,7 @@
     "eslint-plugin-import": "^2.2.0",
     "express": "^4.15.2",
     "morgan": "^1.8.1",
+    "node-fetch": "^1.6.3",
     "serve-favicon": "^2.4.2"
   },
   "devDependencies": {

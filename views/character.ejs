@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Find out everything about your favorite Star Wars characters! </h2>
+      <form method='POST' action="/character">
+        <input placeholder="Enter a character's name and hit enter" class="search-box" name="name" type="text" value=<%= name %>>
+      </form>
+      <div class="container">
+        <% for(var i=0; i < characters.length; i++) {%>
+          <div class="card">
+            <h1><%= characters[i].name %></h1>
+            <hr>
+            <table >
+              <tr>
+                <td>Gender</td>
+                <td><%= characters[i].gender %></td>
+              </tr>
+              <tr>
+                <td>Height</td>
+                <td><%= characters[i].height %></td>
+              </tr>
+              <tr>
+                <td>Eye Color</td>
+                <td><%= characters[i].eye_color %></td>
+              </tr>
+              <tr>
+                <td>Hair Color</td>
+                <td><%= characters[i].hair_color %></td>
+              </tr>
+              <tr>
+                <td>Skin Color</td>
+                <td><%= characters[i].skin_color %></td>
+              </tr>
+            </table>
+          </div>
+        <% } %>
+      </div>
+
+    </div>
+
+  </body>
+</html>
