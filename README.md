@@ -2,7 +2,7 @@
 
 ### A demo Express API for the Star Wars API
 
-### You can play the :fire::fire:API:fire::fire: on Heroku [here](https://sw-express.herokuapp.com/).
+### You can play around with the :fire::fire:API:fire::fire: on Heroku [here](https://sw-express.herokuapp.com/).
 
 ## Getting Started
 1. Clone repo: ```git clone https://github.com/carlyleec/sw-express.git```
