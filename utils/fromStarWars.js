@@ -4,7 +4,7 @@
 const fetch = require('node-fetch');
 
 const fromStarWars = async (endpoint) => {
-  const response = await fetch(`https://swapi.co/${endpoint}`);
+  const response = await fetch(`https://swapi.co${endpoint}`);
 
   const json = await response.json();
 

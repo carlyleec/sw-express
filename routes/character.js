@@ -11,9 +11,6 @@ router.get('/', async (req, res) => {
   res.render('character', data);
 });
 
-router.post('/', async (req, res) => {
-  res.redirect(`character/${req.body.name}`);
-});
 
 router.get('/:name', async (req, res) => {
   const character = await fromStarWars(`/api/people/?search=${req.params.name}`);
