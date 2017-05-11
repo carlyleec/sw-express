@@ -27,7 +27,18 @@ router.get('/', async (req, res) => {
     slice(page10x - 10, page10x)
   )(rawResults);
 
-  res.json(results);
+  const formatUrl = (pageNum, sort) => (
+    req.query.sort !== undefined ? `/characters?page=${pageNum}&sort=${sort}` : `/characters?page=${pageNum}`
+  );
+
+  const data = {
+    count: 50,
+    previous: page === 1 ? null : formatUrl(page - 1, req.query.sort),
+    next: page === 5 ? null : formatUrl(page + 1, req.query.sort),
+    results,
+  };
+
+  res.json(data);
 });
 
 

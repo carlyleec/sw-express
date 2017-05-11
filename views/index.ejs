@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <% include ../views/partials/head %>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <p>Explore the API</p>
+    <% include ../views/partials/header %>
+    <hr>
+    <h4><a href="/character">Seach for your favorite Star Wars character</a></h4>
+    <h4><a href="/characters">Get some JSON about 50 random Star Wars characters</a></h4>
+    <h4><a href="/planetresidents">Get some JSON showing which Star Wars characters reside on which planet</a></h4>
   </body>
 </html>

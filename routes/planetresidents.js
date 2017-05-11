@@ -7,7 +7,7 @@ const fetchUrl = require('../utils/fetchUrl');
 router.get('/', async (req, res) => {
   const page = req.query.page === undefined ? 1 : parseInt(req.query.page, 10);
 
-  const { results } = await fromStarWars(`/api/planets/?page=${page}`);
+  const { count, results } = await fromStarWars(`/api/planets/?page=${page}`);
 
   const residents = await Promise.all(
     results.map(result => (
@@ -22,7 +22,14 @@ router.get('/', async (req, res) => {
     return newObj;
   }, {});
 
-  res.json(formattedResults);
+  const data = {
+    count,
+    previous: page === 1 ? null : `/planetresidents?page=${page - 1}`,
+    next: page === Math.floor(count / 10) ? null : `/planetresidents?page=${page + 1}`,
+    results: formattedResults,
+  };
+
+  res.json(data);
 });
 
 
